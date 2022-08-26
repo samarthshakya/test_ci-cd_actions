@@ -29,5 +29,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: samarthshakya/githubactions:latest
+        tags: samarthshakya/backend:latest
 
