@@ -3,7 +3,7 @@ FROM node:16.3.0-alpine
 RUN mkdir -p /app
 WORKDIR /app
 
-COPY package.json package-lock.json /backend/
+COPY package.json package-lock.json ./
 
 # install packages
 RUN npm install
