@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag githubactions:latest
+      run: docker build . --file Dockerfile --tag backend:latest
       
        # Login to Dockerhub
     - name: Login to DockerHub
