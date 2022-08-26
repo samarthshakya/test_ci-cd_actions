@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+        # The action that checked out your repository to the computer that runs the action
+    - uses: actions/checkout@v3 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag backend:latest
       
@@ -22,12 +23,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # Push the Docker image
+      # Push the Docker image
     - name: Push
       id: docker_build
       uses: docker/build-push-action@v2
       with:
-        context: .
         push: true
         tags: samarthshakya/backend:latest
         
