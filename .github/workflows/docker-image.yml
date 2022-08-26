@@ -30,4 +30,6 @@ jobs:
         context: .
         push: true
         tags: samarthshakya/backend:latest
+        
+        # tag is required where username/repository:imagename
 
